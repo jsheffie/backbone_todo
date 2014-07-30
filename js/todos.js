@@ -4,8 +4,10 @@
 // to persist Backbone models within your browser.
 
 // Load the application once the DOM is ready, using `jQuery.ready`:
-$(function(){
+define(["backbone"], function(Bootstrap){
+//$(function(){
   var Todo, TodoList, Todos, TodoView, AppView, module = {};
+
   // Todo Model
   // ----------
 
@@ -239,10 +241,6 @@ $(function(){
 
   // Finally, we kick things off by creating the **App**.
   //var App = new AppView;
-  // Finally, we kick things off by creating the **App**.
-  module.init = function () {
-    return new AppView;          
-  }
    
-  return module; 
+  return new AppView; 
 });

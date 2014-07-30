@@ -4,7 +4,7 @@ requirejs.config({
 		underscore: "underscore",
 		jquery: "jquery",
 		backbone: "backbone",
-		"backbone.localstorage": "backbone.localStorage"
+		"backbone.localStorage": "backbone.localStorage"
 	},
 	shim: {
 		underscore: {
@@ -14,10 +14,10 @@ requirejs.config({
 			deps: ["jquery", "underscore"],
 			exports: "Backbone"
 		},
-		"backbone.localstorage": [ "backbone" ],
+		"backbone.localStorage": [ "backbone" ],
 		todos: {
-			deps: [ "backbone.localstorage" ]
-			//exports: [ "Todo", "TodoList", "Todos", "TodoView", "AppView" ]
+			deps: [ "backbone.localStorage" ],
+			exports: [ "Todo", "TodoList", "Todos", "TodoView", "AppView" ]
 		}
 	}
 });
