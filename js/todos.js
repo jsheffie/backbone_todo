@@ -5,7 +5,7 @@
 
 // Load the application once the DOM is ready, using `jQuery.ready`:
 $(function(){
-
+  var Todo, TodoList, Todos, TodoView, AppView, module = {};
   // Todo Model
   // ----------
 
@@ -238,6 +238,11 @@ $(function(){
   });
 
   // Finally, we kick things off by creating the **App**.
-  var App = new AppView;
-
+  //var App = new AppView;
+  // Finally, we kick things off by creating the **App**.
+  module.init = function () {
+    return new AppView;          
+  }
+   
+  return module; 
 });

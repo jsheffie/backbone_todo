@@ -16,8 +16,8 @@ requirejs.config({
 		},
 		"backbone.localstorage": [ "backbone" ],
 		todos: {
-			deps: [ "backbone.localstorage" ],
-			exports: [ "Todo", "TodoList", "Todos", "TodoView", "AppView", "App" ]
+			deps: [ "backbone.localstorage" ]
+			//exports: [ "Todo", "TodoList", "Todos", "TodoView", "AppView" ]
 		}
 	}
 });
@@ -26,7 +26,5 @@ require(["todos"], function(App){
 	console.log("underscore identity call: ", _.identity(5));
 	console.log("Backbone.history: ", Backbone.history);
 	console.log("------------ Starting app-----------");
-	App.start();
-	// for debuging, adding DashBoard back to the window namespace
-	window.App = require("App");
+	//App.init();
 });
